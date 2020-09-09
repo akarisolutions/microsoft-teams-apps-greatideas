@@ -2,6 +2,8 @@
 // Copyright (c) Microsoft. All rights reserved.
 // </copyright>
 
+using Microsoft.IdentityModel.Logging;
+
 namespace Microsoft.Teams.Apps.SubmitIdea
 {
     using System;
@@ -39,6 +41,8 @@ namespace Microsoft.Teams.Apps.SubmitIdea
         /// </remarks>
         public void ConfigureServices(IServiceCollection services)
         {
+            IdentityModelEventSource.ShowPII = true;
+
             services.AddHttpContextAccessor();
             services.AddConfigurationSettings(this.configuration);
             services.AddBotFrameworkAdapter();

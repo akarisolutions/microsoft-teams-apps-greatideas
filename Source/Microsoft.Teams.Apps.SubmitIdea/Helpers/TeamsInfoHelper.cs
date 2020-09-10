@@ -2,8 +2,6 @@
 // Copyright (c) Microsoft. All rights reserved.
 // </copyright>
 
-using Newtonsoft.Json;
-
 namespace Microsoft.Teams.Apps.SubmitIdea.Helpers
 {
     using System;
@@ -19,6 +17,7 @@ namespace Microsoft.Teams.Apps.SubmitIdea.Helpers
     using Microsoft.Extensions.Logging;
     using Microsoft.Teams.Apps.SubmitIdea.Common;
     using Microsoft.Teams.Apps.SubmitIdea.Common.Interfaces;
+    using Newtonsoft.Json;
 
     /// <summary>
     /// Class that handles the helper methods to fetch team channel information.

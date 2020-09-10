@@ -2,8 +2,6 @@
 // Copyright (c) Microsoft. All rights reserved.
 // </copyright>
 
-using Microsoft.IdentityModel.Logging;
-
 namespace Microsoft.Teams.Apps.SubmitIdea
 {
     using System;
@@ -14,6 +12,7 @@ namespace Microsoft.Teams.Apps.SubmitIdea
     using Microsoft.Bot.Connector.Authentication;
     using Microsoft.Extensions.Configuration;
     using Microsoft.Extensions.DependencyInjection;
+    using Microsoft.IdentityModel.Logging;
     using Microsoft.Teams.Apps.SubmitIdea.Authentication;
 
     /// <summary>

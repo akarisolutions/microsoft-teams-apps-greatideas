@@ -2,6 +2,8 @@
 // Copyright (c) Microsoft. All rights reserved.
 // </copyright>
 
+using Newtonsoft.Json;
+
 namespace Microsoft.Teams.Apps.SubmitIdea.Helpers
 {
     using System;
@@ -71,7 +73,10 @@ namespace Microsoft.Teams.Apps.SubmitIdea.Helpers
         {
             IEnumerable<TeamsChannelAccount> teamsChannelAccounts = new List<TeamsChannelAccount>();
 
+            this.logger.LogInformation($"SERGEY: Team storage provider is {this.teamStorageProvider?.ToString() ?? "null"}");
+
             var teamDetails = await this.teamStorageProvider.GetTeamDetailAsync(teamId);
+            this.logger.LogInformation($"SERGEY: team details: {JsonConvert.SerializeObject(teamDetails)}");
             string serviceUrl = teamDetails.ServiceUrl;
             var conversationReference = new ConversationReference
             {
